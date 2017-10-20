@@ -33,8 +33,9 @@ public class HexDecBin {
 		return false;
 	}
 	
-	public void setBinNumber() { 				/////////////////////////////////////////////////BASE: Binary
+	public void setBinDec() { 				/////////////////////////////////////////////////BASE: Binary
 		bin = JOptionPane.showInputDialog("Enter binary number: ");
+		
 		if(floatCheck(bin) == true) {
 			try  {
 				num = Integer.parseInt(bin, 2);
@@ -55,27 +56,36 @@ public class HexDecBin {
 			
 			
 		}
+		
 	}
 	
-	public void setDecNumber() {				/////////////////////////////////////////////////BASE: Decimal
+	public void setDecBin() {				/////////////////////////////////////////////////BASE: Decimal
 		
 		dec = JOptionPane.showInputDialog("Enter decimal number: ");
 		if(floatCheck(dec) == true) {
 			try {
 				//Holy crap
+				num = Float.valueOf(dec);
 				
 				messanger = ("You have entered decimal : " + dec);
 				JOptionPane.showMessageDialog(null, messanger);
-				messanger = ("Hexadecimal value : " + Integer.toHexString(Integer.valueOf(dec)));
+				messanger = ("Hexadecimal value : " + Integer.toHexString((int)num));
 				JOptionPane.showMessageDialog(null, messanger);
+				
 			} catch(Exception err) {
 				messanger = ("You have entered decimal: " + dec);
 				JOptionPane.showMessageDialog(null, messanger);
 			}
 		}
+		
 	}
 	
-	public void setHexNumber() {				/////////////////////////////////////////////////BASE: Hexadecimal
+	public void setDecHex() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void setHexDec() {				/////////////////////////////////////////////////BASE: Hexadecimal
 		
 		hex = JOptionPane.showInputDialog("Enter hex number: ");
 	
@@ -149,5 +159,7 @@ public class HexDecBin {
 		} //while
 		return localKeepGoingCheck;
 	}
+
+	
 	
 }
