@@ -7,7 +7,7 @@ public class RunHere {
 		Object[] selections = {"Hex Base Converter", "Decimal Base Converter", "Binary Base Converter", "Exponential calculator", "None"};
 		String selection = "None";
 		
-		//TODO: .setDefaultCloseOperation(EXIT_ON_CLOSE)
+		//TODO: .setDefaultCloseOperation(EXIT_ON_CLOSE) 
 		/**
 		 * 1: JOP's (done)
 		 * 2: Standalone Jar File (TODO)

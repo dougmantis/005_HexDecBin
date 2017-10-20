@@ -8,7 +8,7 @@ public class BinPower {
 	//Scanner inp = new Scanner(System.in);
 	
 	public BinPower() {
-		//placeholder
+		//placeholderr
 	}
 	
 	public void setBinary() {

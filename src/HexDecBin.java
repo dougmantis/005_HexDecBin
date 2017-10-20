@@ -10,7 +10,7 @@ public class HexDecBin {
 	String hex = "";
 	String dec = "";
 	String bin = "";
-	static float num; //Int version of dec
+	static float num; //Int version of dec 
 	
 	
 	public HexDecBin() {
