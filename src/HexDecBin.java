@@ -43,12 +43,15 @@ public class HexDecBin {
 				JOptionPane.showMessageDialog(null, messanger);
 				messanger = ("Decimal value : " + num);
 				JOptionPane.showMessageDialog(null, messanger);
+				messanger = ("Hexadecimal value : " + Integer.toHexString((int)num));
+				JOptionPane.showMessageDialog(null, messanger);
 			} catch(Exception err) {
 				messanger = ("You have entered binary : " + bin);
 				JOptionPane.showMessageDialog(null, messanger);
 				messanger = (bin + " is not valid: " + err);
 				JOptionPane.showMessageDialog(null, messanger);
 			}
+			
 			
 			
 		}
@@ -75,18 +78,18 @@ public class HexDecBin {
 	public void setHexNumber() {
 		
 		hex = JOptionPane.showInputDialog("Enter hex number: ");
-		if(floatCheck(hex) == true) {
-			try {
-				num = Integer.parseInt(hex, 16);
-				messanger = ("You have entered hex : " + hex);
-				JOptionPane.showMessageDialog(null, messanger);
-				messanger = ("Decimal value : " + num + " " + "(remember 0-" + num+ " has " + (num+1) + " values");
-				JOptionPane.showMessageDialog(null, messanger);
-			} catch (Exception err) {
-				messanger = ("You have entered hex : " + hex);
-				JOptionPane.showMessageDialog(null, messanger);
-			}
+	
+		try {
+			num = Integer.parseInt(hex, 16);
+			messanger = ("You have entered hex : " + hex);
+			JOptionPane.showMessageDialog(null, messanger);
+			messanger = ("Decimal value : " + num + " " + "(remember 0-" + num+ " has " + (num+1) + " values");
+			JOptionPane.showMessageDialog(null, messanger);
+		} catch (Exception err) {
+			messanger = ("You have entered hex : " + hex + ", and have triggered the following error: " + err);
+			JOptionPane.showMessageDialog(null, messanger);
 		}
+		
 	}
 	
 	public void binConvert() {
@@ -98,6 +101,8 @@ public class HexDecBin {
 			System.out.println("number of whole nibbles (4 bits) - " + ((binary.length() - (binary.length() % 4)) / 4) + " with " + (binary.length() % 4)  + " left over");
 			System.out.println("number of whole bytes (8 bits) - " +  ((binary.length() - (binary.length() % 8)) / 8) + " with " + (binary.length() % 8)  + " left over");
 			*/
+			
+			
 			messanger = ("Binary value : " + binary);
 			JOptionPane.showMessageDialog(null, messanger);
 			messanger = ("number of bits : " + binary.length());
@@ -106,6 +111,9 @@ public class HexDecBin {
 			JOptionPane.showMessageDialog(null, messanger);
 			messanger = ("number of whole bytes (8 bits) : " +  ((binary.length() - (binary.length() % 8)) / 8) + " with " + (binary.length() % 8)  + " left over");
 			JOptionPane.showMessageDialog(null, messanger);
+			
+			
+			
 		} catch(Exception err) {
 			messanger = ("Binary value could not be calculated for the following reason: " + err);
 			JOptionPane.showMessageDialog(null, messanger);
