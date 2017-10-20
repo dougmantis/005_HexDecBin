@@ -33,7 +33,7 @@ public class HexDecBin {
 		return false;
 	}
 	
-	public void setBinNumber() {
+	public void setBinNumber() { 				/////////////////////////////////////////////////BASE: Binary
 		bin = JOptionPane.showInputDialog("Enter binary number: ");
 		if(floatCheck(bin) == true) {
 			try  {
@@ -57,7 +57,7 @@ public class HexDecBin {
 		}
 	}
 	
-	public void setDecNumber() {
+	public void setDecNumber() {				/////////////////////////////////////////////////BASE: Decimal
 		
 		dec = JOptionPane.showInputDialog("Enter decimal number: ");
 		if(floatCheck(dec) == true) {
@@ -75,7 +75,7 @@ public class HexDecBin {
 		}
 	}
 	
-	public void setHexNumber() {
+	public void setHexNumber() {				/////////////////////////////////////////////////BASE: Hexadecimal
 		
 		hex = JOptionPane.showInputDialog("Enter hex number: ");
 	
