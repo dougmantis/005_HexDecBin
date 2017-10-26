@@ -4,7 +4,7 @@ public class RunHere {
 
 	public static void main(String[] args) {
 		
-		Object[] selections = {"Hex Base Converter", "Decimal Base Converter", "Binary Base Converter", "Exponential calculator", "None"};
+		Object[] selections = {"Hex to Decimal Converter", "Hex to Binary Converter", "Decimal to Binary Converter", "Decimal to Hex Converter", "Binary to Decimal Converter", "Binary to Hex Converter", "Exponential calculator", "None"};
 		String selection = "None";
 		
 		//TODO: .setDefaultCloseOperation(EXIT_ON_CLOSE) 
@@ -34,7 +34,7 @@ public class RunHere {
 			
 			if (selection == "Hex to Binary Converter") {
 				HexDecBin baseConverter = new HexDecBin();
-				baseConverter.setHexBin(); //TODO
+				baseConverter.setHexBin();
 				baseConverter.binConvert();
 				
 			}
@@ -57,7 +57,7 @@ public class RunHere {
 			
 			if (selection == "Binary to Hex Converter") {
 				HexDecBin baseConverter = new HexDecBin();
-				baseConverter.setBinHex(); //TODO
+				baseConverter.setBinHex();
 			}
 			
 			//HexDecBin.varReset();

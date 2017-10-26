@@ -44,8 +44,6 @@ public class HexDecBin {
 				JOptionPane.showMessageDialog(null, messanger);
 				messanger = ("Decimal value : " + num);
 				JOptionPane.showMessageDialog(null, messanger);
-				messanger = ("Hexadecimal value : " + Integer.toHexString((int)num));
-				JOptionPane.showMessageDialog(null, messanger);
 			} catch(Exception err) {
 				messanger = ("You have entered binary : " + bin);
 				JOptionPane.showMessageDialog(null, messanger);
@@ -56,8 +54,30 @@ public class HexDecBin {
 			
 			
 		}
-		
 	}
+	
+	public void setBinHex() {
+		
+		bin = JOptionPane.showInputDialog("Enter binary number: ");
+		
+		if(floatCheck(bin) == true) {
+			try  {
+				num = Integer.parseInt(bin, 2);
+				
+				messanger = ("You have entered binary : " + bin);
+				JOptionPane.showMessageDialog(null, messanger);
+				messanger = ("Hexadecimal value : " + Integer.toHexString((int)num));
+				JOptionPane.showMessageDialog(null, messanger);
+			} catch(Exception err) {
+				messanger = ("You have entered binary : " + bin);
+				JOptionPane.showMessageDialog(null, messanger);
+				messanger = (bin + " is not valid: " + err);
+				JOptionPane.showMessageDialog(null, messanger);
+			
+			}
+		}
+	}
+
 	
 	public void setDecBin() {				/////////////////////////////////////////////////BASE: Decimal
 		
@@ -68,8 +88,6 @@ public class HexDecBin {
 				num = Float.valueOf(dec);
 				
 				messanger = ("You have entered decimal : " + dec);
-				JOptionPane.showMessageDialog(null, messanger);
-				messanger = ("Hexadecimal value : " + Integer.toHexString((int)num));
 				JOptionPane.showMessageDialog(null, messanger);
 				
 			} catch(Exception err) {
@@ -83,6 +101,20 @@ public class HexDecBin {
 	public void setDecHex() {
 		// TODO Auto-generated method stub
 		
+		dec = JOptionPane.showInputDialog("Enter decimal number: ");
+		try {
+			//Holy crap
+			num = Float.valueOf(dec);
+			
+			messanger = ("You have entered decimal : " + dec);
+			JOptionPane.showMessageDialog(null, messanger);
+			messanger = ("Hexadecimal value : " + Integer.toHexString((int)num));
+			JOptionPane.showMessageDialog(null, messanger);
+			
+		} catch(Exception err) {
+			messanger = ("You have entered decimal: " + dec);
+			JOptionPane.showMessageDialog(null, messanger);
+		}
 	}
 	
 	public void setHexDec() {				/////////////////////////////////////////////////BASE: Hexadecimal
@@ -94,6 +126,21 @@ public class HexDecBin {
 			messanger = ("You have entered hex : " + hex);
 			JOptionPane.showMessageDialog(null, messanger);
 			messanger = ("Decimal value : " + num + " " + "(remember 0-" + num+ " has " + (num+1) + " values");
+			JOptionPane.showMessageDialog(null, messanger);
+		} catch (Exception err) {
+			messanger = ("You have entered hex : " + hex + ", and have triggered the following error: " + err);
+			JOptionPane.showMessageDialog(null, messanger);
+		}
+		
+	}
+	
+	public void setHexBin() {
+		
+		hex = JOptionPane.showInputDialog("Enter hex number: ");
+		
+		try {
+			num = Integer.parseInt(hex, 16);
+			messanger = ("You have entered hex : " + hex);
 			JOptionPane.showMessageDialog(null, messanger);
 		} catch (Exception err) {
 			messanger = ("You have entered hex : " + hex + ", and have triggered the following error: " + err);
@@ -160,6 +207,9 @@ public class HexDecBin {
 		return localKeepGoingCheck;
 	}
 
+
+
+	
 	
 	
 }
